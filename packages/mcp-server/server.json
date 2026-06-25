@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.marchward/mcp-server",
+  "description": "Runtime authority for AI agents: credential mediation, spend cap, approval gates, audit log.",
+  "repository": {
+    "url": "https://github.com/marchward/marchward",
+    "source": "github"
+  },
+  "version": "0.2.4",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@marchward/mcp-server",
+      "version": "0.2.4",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "MARCHWARD_API_URL",
+          "description": "Marchward API base URL",
+          "isRequired": true,
+          "default": "https://api.marchward.ai"
+        },
+        {
+          "name": "MARCHWARD_API_KEY",
+          "description": "Your Marchward API key (mw_...)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "marchward-examples",
+  "private": true,
+  "type": "module",
+  "dependencies": { "@marchward/engine": "^0.1.2" }
+}

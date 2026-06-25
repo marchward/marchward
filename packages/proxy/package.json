@@ -1,0 +1,39 @@
+{
+  "name": "@marchward/proxy",
+  "version": "0.1.2",
+  "description": "Marchward proxy — the local runtime governor that intercepts MCP and HTTP agent tool calls, enforces policy, and mediates credentials",
+  "main": "dist/index.js",
+  "bin": {
+    "marchward-proxy": "dist/cli.js",
+    "marchward-http-proxy": "dist/http-cli.js"
+  },
+  "scripts": {
+    "dev": "tsx watch src/cli.ts",
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "node --import tsx --test src/**/*.test.ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@marchward/engine": "*",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marchward/marchward.git",
+    "directory": "packages/proxy"
+  },
+  "homepage": "https://marchward.ai"
+}
