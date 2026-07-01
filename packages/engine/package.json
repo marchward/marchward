@@ -1,0 +1,32 @@
+{
+  "name": "@marchward/engine",
+  "version": "0.1.2",
+  "description": "Marchward policy engine — the deterministic decision engine and tamper-evident hash-chain audit primitive for AI agent governance",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --import tsx --test src/__tests__/*.test.ts",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  },
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marchward/marchward.git",
+    "directory": "packages/engine"
+  },
+  "homepage": "https://marchward.ai"
+}

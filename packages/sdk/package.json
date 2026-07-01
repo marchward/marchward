@@ -1,0 +1,40 @@
+{
+  "name": "@marchward/sdk",
+  "version": "0.1.2",
+  "description": "Marchward TypeScript SDK — typed client for the runtime authority API for AI agents",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx --test src/__tests__/*.test.ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@marchward/engine": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marchward/marchward.git",
+    "directory": "packages/sdk"
+  },
+  "homepage": "https://marchward.ai"
+}
